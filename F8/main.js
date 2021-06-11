@@ -1,4 +1,4 @@
-/*--------------- Ngày 6/7/2021 Get element method----------------*/
+/*--------------- Ngày 7/6/2021 Get element method----------------*/
 
 /*var headingNode = document.getElementById('heading');
 // console.log(headingNode);
@@ -29,9 +29,19 @@ console.log(document.anchors);*/
 
 /*var listItemNodes = document.querySelectorAll('.box-1 li');
 console.log(listItemNodes);*/
-var boxNode = document.querySelector('.box-1');
+/*var boxNode = document.querySelector('.box-1');
 console.log(boxNode);
 console.log(boxNode.getElementsByTagName('li'));
-console.log(boxNode.querySelector('p'));
+console.log(boxNode.querySelector('p'));*/
 
-/*--------------- Ngày 6/7/2021 Get element method----------------*/
+/*--------------- Ngày 11/6/2021 exercice Get element method----------------*/
+/*document.write('Hello')*/
+
+/*--------------- Ngày 11/6/2021 DOM attribute----------------*/
+var headingElement = document.querySelector('h1');
+console.log(headingElement);
+headingElement.title = 'heading'; //id, class name, href
+headingElement.setAttribute('class', 'heading');
+console.log(headingElement.getAttribute('class'));
+
+/*--------------- Ngày 11/6/2021 DOM attribute----------------*/
