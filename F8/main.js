@@ -38,10 +38,28 @@ console.log(boxNode.querySelector('p'));*/
 /*document.write('Hello')*/
 
 /*--------------- Ngày 11/6/2021 DOM attribute----------------*/
-var headingElement = document.querySelector('h1');
+/*var headingElement = document.querySelector('h1');
 console.log(headingElement);
 headingElement.title = 'heading'; //id, class name, href
 headingElement.setAttribute('class', 'heading');
-console.log(headingElement.getAttribute('class'));
+console.log(headingElement.getAttribute('class'));*/
 
-/*--------------- Ngày 11/6/2021 DOM attribute----------------*/
+/*--------------- Ngày 12/6/2021 inner text----------------*/
+/*var headingElement = document.querySelector('.heading');
+console.log(headingElement.innerText);
+console.log(headingElement.textContent);
+headingElement.innerText = 'New heading'; //textContent tương tự
+//innerText trả về những thứ nhìn thấy, còn textContent trả về toàn bộ DOM
+
+headingElement.innerText = `
+    New Heading
+    `;
+headingElement.textContent = `
+    New heading
+    `;*/
+/*--------------- Ngày 12/6/2021 inner HTML----------------*/
+var boxElement = document.querySelector('.box');
+console.log(boxElement);
+boxElement.innerHTML = '<h1>Hello</h1>';
+console.log(boxElement.innerHTML);
+boxElement.outerHTML = '<h2>Lo cc</h2>';
