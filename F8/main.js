@@ -65,7 +65,7 @@ console.log(boxElement.innerHTML);
 boxElement.outerHTML = '<h2>Lo cc</h2>';*/
 
 /*--------------- Ngày 15/6/2021 DOM CSS, ClassList, DOM Event ----------------*/
-var boxElement = document.querySelector('.box');
+// var boxElement = document.querySelector('.box');
 // Dùng để css inline
 /*boxElement.style.width = '100px';
 boxElement.style.height = '200px';
@@ -148,10 +148,40 @@ ulElement.onmousedown = function(e) {
 ulElement.onclick = function(e) {
     console.log(e.target);
 }*/
-document.querySelector('div').onclick = function(e) {
+/*document.querySelector('div').onclick = function(e) {
     console.log("Div");
 }
 document.querySelector('button').onclick = function(e) {
     e.stopPropagation();
     console.log('Click here!');
+}*/
+
+/*--------------- Ngày 15/6/2021 Event listener ----------------*/
+var btn = document.getElementById('btn');
+/*setTimeout(function(e) {
+    btn.onclick = function(e) {
+        console.log('Viec 1');
+        console.log('Viec 2');
+        alert('Viec 3');
+    }
+}, 3000);*/
+/*btn.addEventListener('click', function(e) {
+    console.log('Viec 1');
+});
+btn.addEventListener('click', function(e) {
+    console.log('Viec 2');
+});
+btn.addEventListener('click', function(e) {
+    console.log('Viec 3');
+});*/
+function Viec1() {
+    console.log('Viec 1');
 }
+function Viec2() {
+    console.log('Viec 2');
+}
+btn.addEventListener('click', Viec1);
+btn.addEventListener('click', Viec2);
+setTimeout(function() {
+    btn.removeEventListener('click', Viec1);
+}, 3000);
