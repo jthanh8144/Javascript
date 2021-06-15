@@ -58,8 +58,42 @@ headingElement.textContent = `
     New heading
     `;*/
 /*--------------- Ngày 12/6/2021 inner HTML----------------*/
-var boxElement = document.querySelector('.box');
+/*var boxElement = document.querySelector('.box');
 console.log(boxElement);
 boxElement.innerHTML = '<h1>Hello</h1>';
 console.log(boxElement.innerHTML);
-boxElement.outerHTML = '<h2>Lo cc</h2>';
+boxElement.outerHTML = '<h2>Lo cc</h2>';*/
+
+/*--------------- Ngày 15/6/2021 DOM CSS, ClassList, DOM Event ----------------*/
+var boxElement = document.querySelector('.box');
+// Dùng để css inline
+/*boxElement.style.width = '100px';
+boxElement.style.height = '200px';
+boxElement.style.backgroundColor = 'red';*/
+/*Object.assign(boxElement.style, {
+    width: '200px',
+    height: '100px',
+    backgroundColor: 'green'
+});*/
+
+/*console.log(boxElement.classList);
+boxElement.classList.add('red', 'blue');
+console.log(boxElement.classList.contains('red'));
+// boxElement.classList.remove('red');
+setTimeout(() => {
+    boxElement.classList.remove('red');
+}, 3000);
+setInterval(() => {
+    boxElement.classList.toggle('red');
+}, 1000);*/
+
+/*var h1Element = document.querySelector('.DOM-event');
+h1Element.onclick = function() {
+    console.log(Math.random());
+}*/
+var h1Element = document.querySelectorAll('.DOM-event');
+for (var i = 0; i < h1Element.length; i++) {
+    h1Element[i].onclick = function(e) {
+        console.log(e.target);
+    }
+}
