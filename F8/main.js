@@ -91,9 +91,67 @@ setInterval(() => {
 h1Element.onclick = function() {
     console.log(Math.random());
 }*/
-var h1Element = document.querySelectorAll('.DOM-event');
+/*var h1Element = document.querySelectorAll('.DOM-event');
 for (var i = 0; i < h1Element.length; i++) {
     h1Element[i].onclick = function(e) {
         console.log(e.target);
     }
+}*/
+
+/*var inputElement = document.querySelector('input[type=text]');
+// inputElement.onchange = function(e) {
+//     console.log(e.target.value);
+// }
+inputElement.oninput = function(e) {
+    console.log(e.target.value);
+}*/
+/*var inputElement = document.querySelector('input[type=checkbox]');
+inputElement.onchange = function(e) {
+    console.log(e.target.checked);
+}*/
+/*var inputElement = document.querySelector('select');
+inputElement.onchange = function(e) {
+    console.log(e.target.value);
+}*/
+/*var inputElement = document.querySelector('input[type=text]');
+inputElement.onkeydown = function(e) {
+    console.log(e.which);
+    switch(e.which){
+        case 27:
+            console.log('ESC');
+    }
+}*/
+/*document.onkeypress = function(e) {
+    console.log(e.which)
+    switch(e.which){
+        case 27:
+            console.log('ESC'); // key press không nhận ESC
+            break
+        case 13:
+            console.log('Enter');
+            break;
+    }
+}*/
+
+/*var aElement = document.querySelectorAll('a');
+for (var i = 0; i < aElement.length; i++) {
+    aElement[i].onclick = function(e) {
+        if (!e.target.href.startsWith('http://fb.com')) {
+            e.preventDefault();
+        }
+    }
+}*/
+/*var ulElement = document.querySelector('ul');
+ulElement.onmousedown = function(e) {
+    e.preventDefault();
+}
+ulElement.onclick = function(e) {
+    console.log(e.target);
+}*/
+document.querySelector('div').onclick = function(e) {
+    console.log("Div");
+}
+document.querySelector('button').onclick = function(e) {
+    e.stopPropagation();
+    console.log('Click here!');
 }
