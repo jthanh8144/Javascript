@@ -44,6 +44,23 @@
             </div>
 
             <div class="form-group">
+                <label for="avatar" class="form-label">Ảnh đại diện</label>
+                <input type="file" id="avatar" name="avatar" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="area" class="form-label">Khu vực</label>
+                <select id="area" name="area" class="form-control">
+                    <option value="">Chọn khu vực</option>
+                    <option value="Northern">Miền Bắc</option>
+                    <option value="Central">Miền Trung</option>
+                    <option value="South">Miền Nam</option>
+                </select>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
                 <label for="gender" class="form-label">Giới tính</label>
                 <div class="gender">
                     <div class="radio">
@@ -57,6 +74,25 @@
                     <div class="radio">
                         <input type="radio" name="radio" id="other" value="other">
                         <label for="other" class="radio-label">Khác</label>
+                    </div>
+                </div>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="interests" class="form-label">Sở thích</label>
+                <div class="interests">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="listen" value="listen">
+                        <label for="listen" class="cb-label">Nghe nhạc</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="watch" value="watch">
+                        <label for="watch" class="cb-label">Xem phim</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="read" value="read">
+                        <label for="read" class="cb-label">Đọc sách</label>
                     </div>
                 </div>
                 <span class="form-message"></span>
