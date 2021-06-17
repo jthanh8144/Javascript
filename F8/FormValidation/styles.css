@@ -175,6 +175,10 @@ html {
     margin-bottom: 10px;
     cursor: pointer;
     font-size: 1.6rem;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input[type="checkbox"] {
@@ -207,7 +211,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-.checkbox input[type="checkbox"]:checked ~ .checkmark::after {
+.checkbox input[type="checkbox"]:checked ~ .checkmark:after {
     display: block;
 }
 
