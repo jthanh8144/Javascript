@@ -1,3 +1,12 @@
+:root {
+    --background-color: rgb(198, 253, 241);
+    --main-color: #41dfd7;
+    --main-color-light: #45ece4;
+    --text-color: rgb(250, 142, 0);
+    --color-blue: #0044ff;
+    --color-red: #ff264a;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +31,7 @@ html {
     min-height: 100px;
     padding: 32px 24px;
     text-align: center;
-    background: rgb(198, 253, 241);
+    background: var(--background-color);
     border-radius: 2px;
     margin: 24px;
     align-self: center; /* nằm giữa màn hình */
@@ -35,7 +44,7 @@ html {
 
 .form .desc {
     text-align: center;
-    color: rgb(250, 142, 0);
+    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: lighter;
     line-height: 2.4rem;
@@ -71,15 +80,15 @@ html {
 }
 
 .form-control:hover {
-    border-color: #0044ff;
+    border-color: var(--color-blue);
 }
 
 .form-group.invalid .form-control {
-    border-color: #ff264a;
+    border-color: var(--color-red);
 }
 
 .form-group.invalid .form-message {
-    color: #ff264a;
+    color: var(--color-red);
 }
 
 .form-message {
@@ -90,7 +99,7 @@ html {
 
 .form-submit {
     outline: none;
-    background-color: #41dfd7;
+    background-color: var(--main-color);
     margin-top: 12px;
     padding: 12px 16px;
     font-weight: 600;
@@ -103,13 +112,14 @@ html {
 }
 
 .form-submit:hover {
-    background-color: #45ece4;
+    background-color: var(--main-color-light);
 }
 
 .spacer {
     margin-top: 24px;
 }
 
+/* style radio */
 .gender {
     display: flex;
     flex-direction: row;
@@ -144,11 +154,70 @@ html {
 }
 
 .radio input[type="radio"]:checked + .radio-label:before {
-    background-color: #41dfd7;
+    background-color: var(--main-color);
     box-shadow: inset 0 0 0 4px #f4f4f4;
 }
 
 .radio input[type="radio"]:focus + .radio-label:before {
     outline: none;
-    border-color: #41dfd7;
+    border-color: var(--main-color);
+}
+
+.interests {
+    text-align: left;
+}
+
+/* style checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    transform: translateX(40%);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: -25px;
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #eee;
+}
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: var(--main-color);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark::after {
+    display: block;
+}
+
+.checkbox .checkmark::after {
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
