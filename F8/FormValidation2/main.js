@@ -1,7 +1,5 @@
-function Validator(formSelector, options) {
-    if (!options) {
-        options = {};
-    }
+function Validator(formSelector) {
+    var _this = this;
 
     function getParent(element, selector) {
         while (element.parentElement) {
@@ -66,10 +64,11 @@ function Validator(formSelector, options) {
         function handleValidate(e) {
             var rules = formRules[e.target.name];
             var errorMessage;
-            rules.find(function (rule) {
+
+            for (var rule of rules) {
                 errorMessage = rule(e.target.value);
-                return errorMessage;
-            });
+                if (errorMessage) break;
+            }
 
             if (errorMessage) {
                 var formGroup = getParent(e.target, '.form-group');
@@ -107,7 +106,7 @@ function Validator(formSelector, options) {
         }
 
         if (isValid) {
-            if (typeof options.onSubmit === 'function') {
+            if (typeof _this.onSubmit === 'function') {
                 var enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
                 var formValues = Array.from(enableInputs).reduce(function (values, input) {
                     switch (input.type) {
@@ -132,7 +131,7 @@ function Validator(formSelector, options) {
                     }
                     return values;
                 }, {});
-                options.onSubmit(formValues);
+                _this.onSubmit(formValues);
             } else {
                 formElement.submit();
             }
@@ -142,8 +141,7 @@ function Validator(formSelector, options) {
 
 
 // config
-Validator('#form-1', {
-    onSubmit: function(data) {
-        console.log(data)
-    }
-});
+var form = new Validator('#form-1');
+form.onSubmit = function(data) {
+    console.log(data);
+};
