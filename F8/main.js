@@ -174,7 +174,7 @@ btn.addEventListener('click', function(e) {
 btn.addEventListener('click', function(e) {
     console.log('Viec 3');
 });*/
-function Viec1() {
+/*function Viec1() {
     console.log('Viec 1');
 }
 function Viec2() {
@@ -184,4 +184,53 @@ btn.addEventListener('click', Viec1);
 btn.addEventListener('click', Viec2);
 setTimeout(function() {
     btn.removeEventListener('click', Viec1);
-}, 3000);
+}, 3000);*/
+
+/*--------------- Ngày 21/6/2021 Reduce ----------------*/
+/*var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+var flatArray = depthArray.reduce(function(flatOUtput, depthItem) {
+    return flatOUtput.concat(depthItem);
+}, []);
+console.log(flatArray);*/
+
+var topic = [
+    {
+        topic: 'FE',
+        courses: [
+            {
+                id: 1,
+                title: 'HTML, css'
+            },
+            {
+                id: 2,
+                title: 'Js'
+            }
+        ]
+    },
+    {
+        topic: 'BE',
+        courses: [
+            {
+                id: 1,
+                title: 'PHP',
+            },
+            {
+                id: 2,
+                title: 'NodeJs'
+            }
+        ]
+    }
+];
+var list = topic.reduce(function(courses, topic) {
+    return courses.concat(topic.courses);
+}, []);
+console.log(list);
+var htmls = list.map(function(course) {
+    return `
+        <div>
+            <h2>${course.title}</h2>
+            <p>ID: ${course.id}</p>
+        </div>
+    `
+});
+console.log(htmls.join(''));
