@@ -193,7 +193,7 @@ var flatArray = depthArray.reduce(function(flatOUtput, depthItem) {
 }, []);
 console.log(flatArray);*/
 
-var topic = [
+/*var topic = [
     {
         topic: 'FE',
         courses: [
@@ -233,4 +233,10 @@ var htmls = list.map(function(course) {
         </div>
     `
 });
-console.log(htmls.join(''));
+console.log(htmls.join(''));*/
+
+/*--------------- Ngày 21/6/2021 JSON ----------------*/
+// var json = '["js","php"]';
+var json = '{"name":"VVThanh","age":19}';
+console.log(JSON.parse(json));
+console.log(JSON.stringify(['js', 'php']));
