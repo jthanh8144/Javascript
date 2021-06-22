@@ -237,6 +237,54 @@ console.log(htmls.join(''));*/
 
 /*--------------- Ngày 21/6/2021 JSON ----------------*/
 // var json = '["js","php"]';
-var json = '{"name":"VVThanh","age":19}';
+/*var json = '{"name":"VVThanh","age":19}';
 console.log(JSON.parse(json));
-console.log(JSON.stringify(['js', 'php']));
+console.log(JSON.stringify(['js', 'php']));*/
+
+/*--------------- Ngày 22/6/2021 Promise ----------------*/
+// Dùng để xử lí bất đồng bộ, trước khi có promise thì dùng call back và sẽ xảy ra vấn đề là call back hell
+// code bị khó nhìn, khó hiểu. Promise sinh ra ở ES6. Để dùng promise cần khai báo với từ khóa new Promise
+// với 1 executor function có 2 tham số dạng hàm là resolve và reject
+/*var promise = new Promise(
+    // Executor
+    function(resolve, reject) {
+        resolve([
+            {
+                id: 1,
+                name: 'Js'
+            }
+        ]);
+        // reject('co loi');
+    }
+);
+promise
+    .then(function(courses) {
+        console.log(courses);
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+    .finally(function(){
+        console.log('Done');
+    });*/
+
+// var promise = Promise.resolve(1);
+// var promise = Promise.reject('Co loi');
+var promise1 = new Promise(
+    function(resolve, reject) {
+        setTimeout(function() {
+            resolve([1]);
+        }, 2000);
+    }
+);
+var promise2 = new Promise(
+    function(resolve, reject) {
+        setTimeout(function() {
+            resolve([2, 3]);
+        }, 5000);
+    }
+);
+Promise.all([promise1, promise2])
+    .then(function(result) {
+        console.log(result);
+    });
