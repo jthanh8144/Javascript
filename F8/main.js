@@ -313,7 +313,7 @@ logger('message...');*/
 const description = `Course name: ${courseName}`;
 console.log(description);*/
 
-class Course {
+/*class Course {
     constructor(name, price) {
         this.name = name;
         this.price = price;
@@ -323,4 +323,23 @@ class Course {
     }
 }
 const jsCourse = new Course('Js', 1000);
-console.log(jsCourse);
+console.log(jsCourse);*/
+
+/*var name = 'js';
+var price = 1000;
+var course = {
+    name,
+    price,
+    getName() {
+        return this.name;
+    }
+}
+console.log(course);*/
+
+function logger(log) {
+    if (typeof log === 'undefined') {
+        log = 'Gia tri mac dinh';
+    }
+    console.log(log);
+}
+logger();
