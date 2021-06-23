@@ -270,7 +270,7 @@ promise
 
 // var promise = Promise.resolve(1);
 // var promise = Promise.reject('Co loi');
-var promise1 = new Promise(
+/*var promise1 = new Promise(
     function(resolve, reject) {
         setTimeout(function() {
             resolve([1]);
@@ -287,4 +287,13 @@ var promise2 = new Promise(
 Promise.all([promise1, promise2])
     .then(function(result) {
         console.log(result);
-    });
+    });*/
+
+/*--------------- Ngày 23/6/2021 let, const ----------------*/
+let x = 1;
+console.log(x);
+const a = {
+    name: 'js'
+};
+a.name = 'php';
+console.log(a.name);
