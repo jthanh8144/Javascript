@@ -306,5 +306,21 @@ logger('message...');*/
 console.log(sum(2, 2));*/
 /*const sum = (a, b) => ({a: a, b: b, result: a + b});
 console.log(sum(2, 2));*/
-const logger = log => console.log(log);
-logger('message...');
+/*const logger = log => console.log(log);
+logger('message...');*/
+/*--------------- Ngày 23/6/2021 Template string, classes ----------------*/
+/*const courseName = 'Js';
+const description = `Course name: ${courseName}`;
+console.log(description);*/
+
+class Course {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    getName() {
+        return this.name;
+    }
+}
+const jsCourse = new Course('Js', 1000);
+console.log(jsCourse);
