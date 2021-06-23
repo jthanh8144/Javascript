@@ -290,10 +290,21 @@ Promise.all([promise1, promise2])
     });*/
 
 /*--------------- Ngày 23/6/2021 let, const ----------------*/
-let x = 1;
+/*let x = 1;
 console.log(x);
 const a = {
     name: 'js'
 };
 a.name = 'php';
-console.log(a.name);
+console.log(a.name);*/
+/*--------------- Ngày 23/6/2021 arrow function ----------------*/
+/*const logger = (log) => {
+    console.log(log);
+};
+logger('message...');*/
+/*const sum = (a, b) => a + b;
+console.log(sum(2, 2));*/
+/*const sum = (a, b) => ({a: a, b: b, result: a + b});
+console.log(sum(2, 2));*/
+const logger = log => console.log(log);
+logger('message...');
