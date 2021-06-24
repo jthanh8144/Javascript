@@ -336,10 +336,39 @@ var course = {
 }
 console.log(course);*/
 
-function logger(log) {
+/*function logger(log) {
     if (typeof log === 'undefined') {
         log = 'Gia tri mac dinh';
     }
     console.log(log);
 }
-logger();
+logger();*/
+
+/*--------------- Ngày 23/6/2021 phân rã mảng, đối tượng ----------------*/
+/*var arr = ['Js', 'html', 'css'];
+// var [a, b, c] = arr;
+// console.log(a, b, c);
+var [a, ...rest] = arr;
+console.log(a);
+console.log(rest);*/
+
+var course = {
+    name: 'Js',
+    price: 10000,
+    image: 'img-address',
+    children: {
+        name: 'web'
+    }
+};
+// var {name, price, image} = course;
+// console.log(name, price);
+// var { name, ...rest } = course;
+// console.log(rest);
+var { name: parentName, children: { name: childName } } = course;
+console.log(parentName);
+console.log(childName);
+
+function logger(...params) {
+    console.log(params);
+}
+logger(1, 2, 3, 4, 5);
