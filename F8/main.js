@@ -344,7 +344,7 @@ console.log(course);*/
 }
 logger();*/
 
-/*--------------- Ngày 23/6/2021 phân rã mảng, đối tượng ----------------*/
+/*--------------- Ngày 23/6/2021 phân rã mảng, đối tượng, toán tử rest, spread----------------*/
 /*var arr = ['Js', 'html', 'css'];
 // var [a, b, c] = arr;
 // console.log(a, b, c);
@@ -352,7 +352,7 @@ var [a, ...rest] = arr;
 console.log(a);
 console.log(rest);*/
 
-var course = {
+/*var course = {
     name: 'Js',
     price: 10000,
     image: 'img-address',
@@ -366,9 +366,22 @@ var course = {
 // console.log(rest);
 var { name: parentName, children: { name: childName } } = course;
 console.log(parentName);
-console.log(childName);
+console.log(childName);*/
 
-function logger(...params) {
+/*function logger(...params) {
     console.log(params);
 }
-logger(1, 2, 3, 4, 5);
+logger(1, 2, 3, 4, 5);*/
+
+/*var arr1 = ['Js', 'html', 'css'];
+var arr2 = ['c++', 'c#'];
+var arr = [...arr2, ...arr1];
+console.log(arr);*/
+var obj1 = {
+    name: 'Js'
+};
+var onj2 = {
+    price: 10000
+};
+var obj = {...obj1, ...onj2};
+console.log(obj);
