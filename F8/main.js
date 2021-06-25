@@ -344,7 +344,7 @@ console.log(course);*/
 }
 logger();*/
 
-/*--------------- Ngày 23/6/2021 phân rã mảng, đối tượng, toán tử rest, spread----------------*/
+/*--------------- Ngày 24/6/2021 phân rã mảng, đối tượng, toán tử rest, spread----------------*/
 /*var arr = ['Js', 'html', 'css'];
 // var [a, b, c] = arr;
 // console.log(a, b, c);
@@ -377,11 +377,22 @@ logger(1, 2, 3, 4, 5);*/
 var arr2 = ['c++', 'c#'];
 var arr = [...arr2, ...arr1];
 console.log(arr);*/
-var obj1 = {
+/*var obj1 = {
     name: 'Js'
 };
 var onj2 = {
     price: 10000
 };
 var obj = {...obj1, ...onj2};
-console.log(obj);
+console.log(obj);*/
+
+/*--------------- Ngày 25/6/2021 Tagged template literals----------------*/
+function highlight([first, ...strings], ...value) {
+    return value.reduce(
+        (acc, current) => [...acc, `<span>${current}</span>`, strings.shift()], [first]
+    ).join('');
+}
+var course = 'js';
+var brand = 'f8';
+const html = highlight`Học lập trình ${course} tại ${brand} !`;
+console.log(html);
