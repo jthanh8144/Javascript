@@ -397,7 +397,23 @@ var brand = 'f8';
 const html = highlight`Học lập trình ${course} tại ${brand} !`;
 console.log(html);*/
 
-import logger, {TYPE_LOG, TYPE_WARN, TYPE_ERROR} from './module.js';
-logger('Test', TYPE_LOG);
+/*import logger, {TYPE_LOG, TYPE_WARN, TYPE_ERROR} from './module.js';
+logger('Test', TYPE_LOG);*/
 // import * as name from '';
 // export {default} from '';
+
+const obj = {
+    name: 'Thành',
+    cat1: {
+        name: 'Mèo 1',
+        cat2: {
+            name: 'Mèo 2',
+            cat3: {
+                name: 'Mèo 3'
+            }
+        }
+    }
+};
+if (obj?.cat1?.cat2?.cat3) {
+    console.log(obj.cat1.cat2.cat3.name);
+}
