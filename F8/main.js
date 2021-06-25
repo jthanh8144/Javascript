@@ -386,8 +386,8 @@ var onj2 = {
 var obj = {...obj1, ...onj2};
 console.log(obj);*/
 
-/*--------------- Ngày 25/6/2021 Tagged template literals----------------*/
-function highlight([first, ...strings], ...value) {
+/*--------------- Ngày 25/6/2021 Tagged template literals, module, toán tử ?. ----------------*/
+/*function highlight([first, ...strings], ...value) {
     return value.reduce(
         (acc, current) => [...acc, `<span>${current}</span>`, strings.shift()], [first]
     ).join('');
@@ -395,4 +395,9 @@ function highlight([first, ...strings], ...value) {
 var course = 'js';
 var brand = 'f8';
 const html = highlight`Học lập trình ${course} tại ${brand} !`;
-console.log(html);
+console.log(html);*/
+
+import logger, {TYPE_LOG, TYPE_WARN, TYPE_ERROR} from './module.js';
+logger('Test', TYPE_LOG);
+// import * as name from '';
+// export {default} from '';
