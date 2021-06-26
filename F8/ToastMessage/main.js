@@ -40,7 +40,7 @@ function toast({title = '', message = '', type = 'info', duration = 3000}) {
 }
 
 //config
-const btns = Array.from(document.querySelectorAll('.btn'));
+const btns = document.querySelectorAll('.btn');
 for (var btn of btns) {
     btn.onclick = showToastMessage;
 }
