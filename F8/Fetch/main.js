@@ -1,4 +1,4 @@
-var postApi = 'https://jsonplaceholder.typicode.com/posts';
+/*var postApi = 'https://jsonplaceholder.typicode.com/posts';
 fetch(postApi)
     .then(function(response) {
         return response.json();
@@ -15,4 +15,13 @@ fetch(postApi)
     })
     .catch(function() {
         console.log('Có lỗi');
-    });
+    });*/
+
+var courseApi = 'http://localhost:3000/courses';
+fetch(courseApi)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+    })
