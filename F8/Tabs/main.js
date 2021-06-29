@@ -1,3 +1,5 @@
+var $ = document.querySelector.bind(document);
+
 var tabs = document.querySelectorAll('.tab-item');
 var panes = document.querySelectorAll('.tab-pane');
 var tabActive = document.querySelector('.tab-item.active');
@@ -17,4 +19,4 @@ tabs.forEach((tab, index) => {
         line.style.left = tab.offsetLeft + 'px';
         line.style.width = tab.offsetWidth + 'px';
     }
-})
+});

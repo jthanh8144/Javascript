@@ -157,7 +157,7 @@ document.querySelector('button').onclick = function(e) {
 }*/
 
 /*--------------- Ngày 15/6/2021 Event listener ----------------*/
-var btn = document.getElementById('btn');
+//var btn = document.getElementById('btn');
 /*setTimeout(function(e) {
     btn.onclick = function(e) {
         console.log('Viec 1');
@@ -402,7 +402,7 @@ logger('Test', TYPE_LOG);*/
 // import * as name from '';
 // export {default} from '';
 
-const obj = {
+/*const obj = {
     name: 'Thành',
     cat1: {
         name: 'Mèo 1',
@@ -416,4 +416,26 @@ const obj = {
 };
 if (obj?.cat1?.cat2?.cat3) {
     console.log(obj.cat1.cat2.cat3.name);
+}*/
+
+/*--------------- Ngày 29/6/2021 Cách hoạt động reduce ----------------*/
+const numbers = [1, 2, 3, 4, 5];
+/*const result = numbers.reduce((total, number) => {
+    return total + number;
+});
+console.log(result);*/
+Array.prototype.reduce2 = function (callback, result) {
+    let i = 0;
+    if (arguments.length < 2) {
+        result = this[0];
+        i = 1;
+    }
+    for (i; i < this.length; i++) {
+        result = callback(result, this[i], i, this);
+    }
+    return result;
 }
+const result = numbers.reduce2((total, number) => {
+    return total + number;
+});
+console.log(result);
