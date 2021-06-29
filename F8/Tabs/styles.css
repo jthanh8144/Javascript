@@ -1,0 +1,90 @@
+:root {
+    --background-color: rgb(140, 145, 143);
+    --main-color: #41dfd7;
+    --main-color-light: #45ece4;
+    --main-color-dark: #819b99;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+}
+
+body > div {
+    margin: 15% 0 auto;
+    max-width: 720px;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: var(--main-color-light);
+    transition: all .2s ease;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-color);
+    background-color: var(--background-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: var(--main-color-dark);
+    border-color: var(--main-color-light);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 28px 0;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+    width: 550px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
