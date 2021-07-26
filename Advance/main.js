@@ -9,7 +9,7 @@
         myFunc();
 })();*/
 
-const app = (function () {
+/*const app = (function () {
     const cars = [];
     return {
         add(car) {
@@ -22,4 +22,11 @@ const app = (function () {
             cars.splice(index, 1);
         }
     }
-})();
+})();*/
+
+{
+    let a = 0;
+    const b = 1;
+    console.log(a, b);
+}
+console.log(a, b);
