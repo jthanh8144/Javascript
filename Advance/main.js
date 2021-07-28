@@ -57,7 +57,7 @@ infoLogger('Gửi thành công');
 const errorLogger = createLogger('Error');
 errorLogger('Lỗi');*/
 
-function createStorage(key) {
+/*function createStorage(key) {
     const store = JSON.parse(localStorage.getItem(key)) ?? {};
     const save = () => {
         localStorage.setItem(key, JSON.stringify(store));
@@ -81,4 +81,24 @@ const profileSetting = createStorage('profile_setting');
 console.log(profileSetting.get('fullName'));
 profileSetting.set('fullName', 'Thanh Vo');
 profileSetting.set('age', 19);
-profileSetting.set('address', 'QN');
+profileSetting.set('address', 'QN');*/
+
+/* hoisting */
+/*console.log(age);
+console.log(fullName);
+var age = 16;*/
+
+/*{
+    console.log(fullName);
+    let fullName = 'Vo Van Thanh';
+}*/
+
+const count = makeCounter();
+console.log(count());
+function makeCounter() {
+    let counter = 0;
+    return increase;
+    function increase() {
+        return ++counter;
+    }
+}
