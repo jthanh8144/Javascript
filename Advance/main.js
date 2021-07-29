@@ -93,7 +93,7 @@ var age = 16;*/
     let fullName = 'Vo Van Thanh';
 }*/
 
-const count = makeCounter();
+/*const count = makeCounter();
 console.log(count());
 function makeCounter() {
     let counter = 0;
@@ -101,4 +101,46 @@ function makeCounter() {
     function increase() {
         return ++counter;
     }
+}*/
+
+/* strict mode */
+/*'use strict';
+fullName = 'Vo Van Thanh';
+function test() {
+    age = 19;
 }
+console.log(fullName);
+console.log(age);*/
+
+/*'use strict';
+const student = Object.freeze({
+    fullName: 'Vo Van Thanh'
+});
+student.fullName = 'Thanh Van Vo';
+console.log(student);*/
+/*'use strict';
+const student = {};
+Object.defineProperty(student, 'fullName', {
+    value: 'Vo Van Thanh',
+    writable: true
+});
+student.fullName = 'Thanh Van Vo';
+console.log(student);*/
+
+/*'use strict';
+function sum(a, a) {
+    return a + a;
+}
+console.log(sum(6, 9));*/
+
+/*'use strict';
+{
+    function sum(a, b) {
+        return a + b;
+    }
+}
+console.log(sum(1, 2));*/
+
+'use strict';
+const private = 123;
+console.log(private);
