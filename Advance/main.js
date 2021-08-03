@@ -191,8 +191,8 @@ function myFunc() {
 }
 myFunc();*/
 
-
-'use strict';
+/*
+// 'use strict';
 function Car(name, color) {
     this.name = name;
     this.color = color;
@@ -215,4 +215,50 @@ Car.prototype.run = function() {
 const mercedesBenZ = new Car('Mercedes Ben Z', 'Black');
 const hondaCRV = new Car('Honda CRV', 'White');
 console.log(mercedesBenZ.run());
-console.log(hondaCRV.run());
+console.log(hondaCRV.run());*/
+
+/* bind */
+/*this.firstName = 'Minh';
+this.lastName = 'Thu';
+const teacher = {
+    firstName: 'Minh',
+    lastName: 'Thảo',
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const student = {
+    firstName: 'Vo',
+    lastName: 'Thanh'
+}
+console.log(teacher.getFullName());
+// const getTeacherName = teacher.getFullName;
+// const getTeacherName = teacher.getFullName.bind(teacher);
+const getTeacherName = teacher.getFullName.bind(student);
+console.log(getTeacherName()); */
+
+/*this.firstName = 'Minh';
+this.lastName = 'Thu';
+const teacher = {
+    firstName: 'Minh',
+    lastName: 'Thảo',
+    getFullName(data1, data2) {
+        console.log(data1, ' ', data2);
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const getTeacherName = teacher.getFullName.bind(teacher, 'test 3', 'test 4');
+console.log(getTeacherName('test 1', 'test 2'));*/
+
+const teacher = {
+    firstName: 'Minh',
+    lastName: 'Thảo',
+    getFullName() {
+        console.log(`${this.firstName} ${this.lastName}`);
+    }
+}
+const button = document.querySelector('button');
+// button.onclick = function() {
+//     teacher.getFullName()
+// }
+button.onclick = teacher.getFullName.bind(teacher);
