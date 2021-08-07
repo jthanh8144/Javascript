@@ -263,7 +263,7 @@ const button = document.querySelector('button');
 // }
 button.onclick = teacher.getFullName.bind(teacher);*/
 
-const $ = document.querySelector.bind(document);
+/*const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 // console.log($('#heading').innerText);
 const app = (() => {
@@ -312,4 +312,43 @@ const app = (() => {
 })();
 app.init();
 
-console.log('test');
+console.log('test');*/
+
+/* call */
+/*function random() {
+    console.log(Math.random());
+}
+random.call();*/
+
+/*const teacher = {
+    firstName: 'Minh',
+    lastName: 'Thu'
+};
+const me = {
+    firstName: 'Võ',
+    lastName: 'Thành',
+    showFullName() {
+        console.log(`${this.firstName} ${this.lastName}`);
+    }
+}
+me.showFullName.call(me);*/
+
+/*function Animal(name, weight) {
+    this.name = name;
+    this.weight = weight;
+}
+function Chicken(name, weight, legs) {
+    Animal.call(this, name, weight);
+    this.legs = legs;
+}
+const ga = new Chicken('Con gà', 50, 2);
+console.log(ga);*/
+
+function logger() {
+    // Array.prototype.forEach.call(arguments, item => {
+    //     console.log(item);
+    // });
+    const arr = Array.prototype.slice.call(arguments);
+    arr.forEach(item => console.log(item));
+}
+logger(1, 2, 3);
