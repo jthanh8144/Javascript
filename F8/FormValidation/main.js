@@ -157,15 +157,15 @@ Validator({
     errorSelector: '.form-message',
     rules: [
         Validator.isRequired('#fullname', 'Vui lòng nhập họ tên!'),
-        // Validator.isRequired('#email'),
-        // Validator.isEmail('#email'),
+        Validator.isRequired('#email'),
+        Validator.isEmail('#email'),
         Validator.isRequired('#password'),
         Validator.minLength('#password', 6, 'Mật khẩu'),
         Validator.isRequired('#re-password'),
         Validator.isConfirmed('#re-password', function() {
             return document.querySelector('#form-1 #password').value;
         }, 'Mật khẩu'),
-        Validator.isRequired('avatar', 'Vui lòng chọn một file'),
+        Validator.isRequired('#avatar', 'Vui lòng chọn một file'),
         Validator.isRequired('select', 'Vui lòng chọn khu vực!'),
         Validator.isRequired('input[type="radio"]', 'Vui lòng chọn giới tính!'),
         Validator.isRequired('input[type="checkbox"]', 'Vui lòng chọn ít nhất một sở thích!')
