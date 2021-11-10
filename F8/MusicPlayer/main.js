@@ -56,7 +56,7 @@ const app = {
         {
             name: "Sài gòn hôm nay mưa",
             singer: "Hoàng Duyên & JSOL",
-            path: "http://vnno-vn-6-tf-mp3-s1-zmp3.zadn.vn/6adf85ae97e87eb627f9/5151330597951198564?authen=exp=1625213314~acl=/6adf85ae97e87eb627f9/*~hmac=64db9e529c74d74d90d58469dbb2eec9",
+            path: "https://data.chiasenhac.com/down2/2174/4/2173778-f967e564/320/Sai%20Gon%20Hom%20Nay%20Mua%20-%20JSOL_%20Hoang%20Duyen.mp3",
             image: "https://i.scdn.co/image/ab67616d0000b273d1b5e4b7be8a727c73bfcc53"
         }
     ],

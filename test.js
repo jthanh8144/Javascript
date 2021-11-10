@@ -1,32 +1,12 @@
-var a = [
-    44299, 
-    44299, 
-    46145, 
-    46145, 
-    46145, 
-    46145, 
-    46145, 
-    47991, 
-    47991, 
-    47991, 
-    47991, 
-    49837, 
-    49837, 
-    49837, 
-    49837, 
-    49837, 
-    49837, 
-    51682, 
-    51682, 
-    51682, 
-    51682, 
-    51682, 
-    51682,
-];
-var s = 0;
-for (var i = 0; i < a.length; i++) {
-    s += a[i];
+const cars = [];
+const num = [1, 2, 3, 7, 3, 9];
+function a(num, str) {
+	this.str = str;
+	this.num = num;
 }
-s -= 115000;
-s += 11500;
-console.log(s);
+
+var b = new a(num, "BMW");
+cars[0] = [b];
+var c = new a();
+c = cars[0];
+console.log(c[0].str);
